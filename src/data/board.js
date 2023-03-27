@@ -1,0 +1,42 @@
+export default  [
+  {
+    id: 1,
+    date: '2023/03/03',
+    field: '공지',
+    writer: '작성자1',
+    title: '제목입니다1',
+    content: '내용입니다1',
+  },
+  {
+    id: 2,
+    date: '2023/03/03',
+    field: '공지',
+    writer: '작성자2',
+    title: '제목입니다2',
+    content: '내용입니다2',
+  },
+  {
+    id: 3,
+    date: '2023/03/03',
+    field: '공지',
+    writer: '작성자3',
+    title: '제목입니다3',
+    content: '내용입니다3',
+  },
+  {
+    id: 4,
+    date: '2023/03/03',
+    field: '공지',
+    writer: '작성자4',
+    title: '제목입니다4',
+    content: '내용입니다4',
+  },
+  {
+    id: 5,
+    date: '2023/03/03',
+    field: '공지',
+    writer: '작성자5',
+    title: '제목입니다5',
+    content: '내용입니다5',
+  },
+]
