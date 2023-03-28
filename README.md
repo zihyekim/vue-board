@@ -1,26 +1,10 @@
 # vue-board
 
-## Project setup
-```
-npm install
-```
+> 📍 목표: Vue 프레임워크를 통해 간단한 게시판 화면만들기
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+#### 학습 절차
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# vue-board
-# vue-board
+1. data.js 파일로 기본적인 CRUD 기능 구현
+2. boardItem 등 component화 하기
+3. vuex로 sorting 기능 구현
+4. 몽고DB axios로 데이터 CRUD 기능 구현
