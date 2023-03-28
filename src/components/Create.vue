@@ -23,7 +23,7 @@
         </tr>
       </tbody>
     </table>
-    <button @click="save()">저장</button>
+    <button @click="!boardId ? create(): update()">저장</button>
   </div>
 </template>
 
@@ -32,20 +32,37 @@ import boardList from '@/data/board'
 
 export default {
   name:'BoardCreate',
-  data:() =>({
-    boardList,
-    newData:{
-      id: boardList.length + 1,
-      writer:'',
-      field:'',
-      title:'',
-      content:'',
-    },
-  }),
+  data() {
+    const boardId = this.$route.params.boardId;
+    return {
+      boardList,
+      boardId,
+      newData:{
+        id: boardList.length + 1,
+        writer: '',
+        field: '',
+        title: '',
+        content: '',
+      }
+    }
+  },
+  mounted(){
+    this.checkBoardId()
+
+  },
   methods:{
-    save(){
+    create(){
       boardList.push(this.newData);
       this.$router.push('/')
+    },
+    update(){
+      this.boardList[this.board - 1] = this.newData
+      this.$router.push('/')
+    },
+    checkBoardId(){
+      if(this.boardId) {
+        this.newData = this.boardList[this.boardId - 1]
+      }
     }
   },
 }

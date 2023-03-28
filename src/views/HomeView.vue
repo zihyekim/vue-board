@@ -20,7 +20,7 @@
           </colgroup>
           <thead>
             <tr>
-              <td v-for="item in ['No','분류','제목','작성자','작성일']" :key="item.idex">
+              <td v-for="item in ['No','분류','제목','작성자','작성일']" :key="item.index">
                 {{item}}
               </td>
             </tr>
@@ -68,7 +68,7 @@ export default {
       this.$router.push({
         name:'BoardDetail',
         params:{
-          boardId
+          boardId,
         }
       })
     }

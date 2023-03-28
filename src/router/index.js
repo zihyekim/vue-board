@@ -13,8 +13,8 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/create',
-    name: 'create',
+    path: '/create/:boardId?',
+    name: 'BoardCreate',
     component: BoardCreate
   },
   {
