@@ -26,7 +26,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="board in boardList" :key="board.id">
+            <tr v-for="board in boardList" :key="board.id" @click="goDetail(board.id)">
               <td>{{ board.id }}</td>
               <td>{{ board.field }}</td>
               <td>{{ board.title }}</td>
@@ -62,7 +62,17 @@ export default {
   // },
   data:()=> ({
     boardList
-  })
+  }),
+  methods:{
+    goDetail(boardId){
+      this.$router.push({
+        name:'BoardDetail',
+        params:{
+          boardId
+        }
+      })
+    }
+  }
 }
 </script>
 <style scoped lang="scss">
