@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import crerateBoard from '../components/Create.vue'
+import BoardCreate from '../components/Create.vue'
+import BoardDetail from '../components/_id.vue'
 
 Vue.use(VueRouter)
 
@@ -14,7 +15,12 @@ const routes = [
   {
     path: '/create',
     name: 'create',
-    component: crerateBoard
+    component: BoardCreate
+  },
+  {
+    path: '/:boardId',
+    name: 'BoardDetail',
+    component: BoardDetail
   },
   {
     path: '/about',
